@@ -5,6 +5,8 @@ import AddFolderButton from "./AddFolderButton"
 import AddFileButton from "./AddFileButton"
 import Folder from "./Folder"
 import File from "./File"
+import 'font-awesome/css/font-awesome.min.css';
+
 import Navbar from "./Navbar"
 import FolderBreadcrumbs from "./FolderBreadcrumbs"
 import { useParams, useLocation } from "react-router-dom"
@@ -19,7 +21,9 @@ export default function Dashboard() {
   return (
     <>
       <Navbar />
+      
       <Container fluid>
+        
         <div className="d-flex align-items-center">
           <FolderBreadcrumbs currentFolder={folder} />
           {userprop!=null && userprop.role=="student" && <AddFileButton currentFolder={folder} >Add File</AddFileButton> }
