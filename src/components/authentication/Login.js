@@ -20,7 +20,7 @@ export default function Login() {
       setError("")
       setLoading(true)
       login(emailRef.current.value, passwordRef.current.value).then(async user=>{
-        console.log(user.user.uid)
+        
         
         history.push("/")
       })
@@ -45,7 +45,7 @@ export default function Login() {
             </Form.Group>
             <Form.Group id="password">
               <Form.Label>Password</Form.Label>
-              <Form.Control type="password" ref={passwordRef} required />
+              <Form.Control type="password" ref={passwordRef} required autoComplete="on" />
             </Form.Group>
             <Button disabled={loading} className="w-100" type="submit">
               Log In

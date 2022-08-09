@@ -38,7 +38,7 @@ export function AuthProvider({ children }) {
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged(async user => {
-      console.log(user)
+      
       let doc=user!=null && user.uid !=null ? await database.users.doc(user.uid).get():null
       //console.log(doc.data())
       let userobj = {}
